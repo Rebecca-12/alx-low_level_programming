@@ -1,28 +1,30 @@
-include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
-/*  more headers goes there */
-* main - entry point
-* * Description : prints  if a number is positive or negative.
-*/* betty style doc for function main goes there */
+
+/**main - Entry point
+ * return: 0 (success) */
 int main(void)
 {
-		int n;
+	    int n;
 
-			srand(time(0));
-				n = rand() - RAND_MAX / 2;
-					if (n > 0)
-							{
-										printf("%d is positive\n", n);
-											}
-						else if (n == 0)
-								{
-											printf("%d is zero\n", n);
-												}
-							else if (n < 0)
-									{
-												printf("%d is negative\n", n);
+	        srand(time(0));
+		    n = rand() - RAND_MAX / 2;
 
-									}
-								return (0);
+		        printf("The number %d is ", n);
+
+			    if (n > 0)
+				        {
+						        printf("positive\n");
+							    }
+			        else if (n == 0)
+					    {
+						            printf("zero\n");
+							        }
+				    else
+					        {
+							        printf("negative\n");
+								    }
+
+				        return (0);
 }
-
