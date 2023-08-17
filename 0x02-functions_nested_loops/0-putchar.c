@@ -2,8 +2,8 @@
 
 /**
  * main - Entry point
- * 
- * Return : 0 (success) 
+ *
+ * Return : 0 indicating successful execution without errors.
  */
 
 int main(void)
