@@ -2,6 +2,9 @@
 
 /**
  * main - Entry point
+ *
+ * return -The main fun0ction uses the _putchar function to print the characters "_putchar" followed by a newline.
+ *
  * Return : Always 0
  */
 
