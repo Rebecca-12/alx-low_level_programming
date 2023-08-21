@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main - print _putchar 
- * is written by mbah
- * Return : 0 
+ * main - prints _putchar
+ * followed by a new line.
+ * Return : 0
  */
 
 int main(void)
