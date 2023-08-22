@@ -1,20 +1,28 @@
 #include "main.h"
 
-int main(void)
+/**
+ * reset_to_98 - Updates the value pointed to by a pointer to 98.
+ * @n: A pointer to the integer to be updated. lol
+Return: 0
+ */
+void reset_to_98(int *n)
 {
-    int n = 402;
-    _putchar('n');
-    _putchar('=');
-    _putchar('0' + (n / 100));   // Digit '4'
-    _putchar('0' + ((n / 10) % 10)); // Digit '0'
-    _putchar('0' + (n % 10));    // Digit '2'
-    _putchar('\n');
-    reset_to_98(&n);
-    _putchar('n');
-    _putchar('=');
-    _putchar('0' + (n / 100));   // Digit '9'
-    _putchar('0' + ((n / 10) % 10)); // Digit '8'
-    _putchar('\n');
-    return (0);
+    *n = 98;
 }
 
+
+
+#include "main.h"
+
+/**
+ * swap_int - Swaps the values of two integers.
+ * @a: A pointer to the first integer.
+ * @b: A pointer to the second integer
+ *Return:0
+ */
+void swap_int(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
