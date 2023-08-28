@@ -6,18 +6,15 @@
 * Return: A pointer to the modified string
 */
 
+
 char *string_toupper(char *str)
 {
-    char *ptr = str;
-
-    while (*ptr)
+    for (int i = 0; str[i] != '\0'; i++)
     {
-        if (*ptr >= 'a' && *ptr <= 'z')
-        {
-            *ptr = *ptr - 32; // Convert to uppercase
-        }
-        ptr++;
+        if (str[i] >= 'a' && str[i] <= 'z')
+            str[i] = str[i] - 32; // Convert to uppercase
     }
 
     return str;
 }
+
