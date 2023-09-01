@@ -17,7 +17,7 @@ int is_prime_number(int n)
 {
 	if (n <= 1)
         return 0; /* 0 and 1 are not prime numbers */
-	return is_prime_recursive(n, 2); /* Start with divisor 2 */
+	return (is_prime_recursive(n, 2)); /* Start with divisor 2 */
 }
 
 /**
