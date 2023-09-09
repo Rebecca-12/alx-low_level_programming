@@ -24,10 +24,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	ptr = malloc(total_size);
 
 	if (ptr == NULL)
-        return (NULL);
+		return (NULL);
 
 	for (i = 0; i < total_size; i++)
-        *((char *)ptr + i) = 0;
+		*((char *)ptr + i) = 0;
 
 	return (ptr);
 }
