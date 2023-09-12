@@ -1,6 +1,12 @@
 #ifndef DOG_H
 #define DOG_H
 
+
+/* Struct Dog:
+* Represents information about a dog including its name, age, and owner.
+*/
+
+
 /* Define a new struct dog with three elements */
 struct dog
 {
