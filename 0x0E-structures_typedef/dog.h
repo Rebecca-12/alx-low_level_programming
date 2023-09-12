@@ -2,7 +2,8 @@
 #define DOG_H
 
 /* Define a new struct dog with three elements */
-struct dog {
+struct dog
+{
 	char *name;
 	float age;
 	char *owner;
