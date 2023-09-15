@@ -1,21 +1,19 @@
-#include <stddef.h>
+#include <stdio.h>
 
-/**
-* array_iterator - Executes a function on each element of an array.
-* @array: The array to be processed.
-* @size: The number of elements in the array.
-* @action: A pointer to the function to be applied to each element.
-*/
-
-void array_iterator(int *array, size_t size, void (*action)(int))
+int int_index(int *array, int size, int (*cmp)(int))
 {
-	if (array != NULL && action != NULL)
+	if (array != NULL && cmp != NULL && size > 0)
 	{
-		size_t i;
+		int i;
 		for (i = 0; i < size; i++)
+		{
+			if (cmp(array[i]))
+			{
+				return i;
+			}
 
-		action(array[i]);
-		/* Call the action function on each element*/
 		}
 	}
+
+		return -1;
 }
