@@ -1,5 +1,7 @@
 #ifndef FUNCTION_POINTERS_H
 #define FUNCTION_POINTERS_H
+#include <stddef.h>
+
 
 /* Prototype for _putchar */
 int _putchar(char c);
