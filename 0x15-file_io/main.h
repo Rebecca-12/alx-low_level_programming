@@ -1,8 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stddef.h>  // For size_t
-#include <unistd.h>  // For ssize_t
+#include <stddef.h>  /* For size_t */
+#include <unistd.h>  /* For ssize_t */
 
 /* Function prototypes */
 
