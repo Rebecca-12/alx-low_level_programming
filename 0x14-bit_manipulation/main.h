@@ -2,10 +2,13 @@
 #define MAIN_H
 
 /**
-* binary_to_uint - Converts a binary number to an unsigned int.
+* binary_to_uint - Converts a 
+* binary number to an unsigned int.
 * @b: Pointer to a string of 0 and 1 chars
 *
-* Return: The converted number, or 0 if there is an invalid character or b is NULL.
+* Return: The converted number, 
+* or 0 if there is an 
+* invalid character or b is NULL.
 */
 
 /* Function prototypes */
