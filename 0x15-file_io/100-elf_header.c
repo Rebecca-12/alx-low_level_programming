@@ -18,13 +18,21 @@ void print_elf_header(Elf64_Ehdr *header)
 		printf("%02x ", header->e_ident[i]);
 	printf("\n");
 
-	printf("  Class:                             %s\n", (header->e_ident[EI_CLASS] == ELFCLASS32) ? "ELF32" : "ELF64");
-	printf("  Data:                              %s\n", (header->e_ident[EI_DATA] == ELFDATA2LSB) ? "2's complement, little endian" : "Unknown");
-	printf("  Version:                           %d (current)\n", header->e_ident[EI_VERSION]);
-	printf("  OS/ABI:                            %s\n", get_osabi_name(header->e_ident[EI_OSABI]));
-	printf("  ABI Version:                       %d\n", header->e_ident[EI_ABIVERSION]);
-	printf("  Type:                              %s\n", get_type_name(header->e_type));
-	printf("  Entry point address:               %#lx\n", (unsigned long)header->e_entry);
+	printf("  Class:                             %s\n",
+			(header->e_ident[EI_CLASS] == ELFCLASS32) ? "ELF32" : "ELF64");
+	printf("  Data:
+			%s\n", (header->e_ident[EI_DATA] == ELFDATA2LSB) ? "2's complement,
+			little endian" : "Unknown");
+	printf("  Version:                           %d (current)\n",
+			header->e_ident[EI_VERSION]);
+	printf("  OS/ABI:                            %s\n",
+			get_osabi_name(header->e_ident[EI_OSABI]));
+	printf("  ABI Version:                       %d\n",
+			header->e_ident[EI_ABIVERSION]);
+	printf("  Type:                              %s\n",
+			get_type_name(header->e_type));
+	printf("  Entry point address:               %#lx\n",
+			(unsigned long)header->e_entry);
 }
 
 /**
@@ -42,7 +50,7 @@ const char *get_osabi_name(unsigned char osabi)
 		case ELFOSABI_HPUX: return "UNIX - HP-UX";
 		case ELFOSABI_NETBSD: return "UNIX - NetBSD";
 		case ELFOSABI_LINUX: return "UNIX - Linux";
-        /* Add more cases as needed */
+	/* Add more cases as needed */
 		default: return "Unknown";
 	}
 }
@@ -63,7 +71,7 @@ const char *get_type_name(uint16_t type)
 		case ET_EXEC: return "EXEC (Executable file)";
 		case ET_DYN: return "DYN (Shared object file)";
 		case ET_CORE: return "CORE (Core file)";
-        /* Add more cases as needed */
+	/* Add more cases as needed */
 		default: return "Unknown";
 	}
 }
@@ -85,6 +93,7 @@ int main(int argc, char *argv[])
 	}
 
 	int fd = open(argv[1], O_RDONLY);
+
 	if (fd == -1)
 	{
 		perror("Error opening file");
@@ -92,6 +101,7 @@ int main(int argc, char *argv[])
 	}
 	Elf64_Ehdr header;
 	ssize_t bytes_read = read(fd, &header, sizeof(header));
+
 	if (bytes_read == -1)
 	{
 		perror("Error reading file");
